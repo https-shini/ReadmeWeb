@@ -1,0 +1,21 @@
+/* ============================================================
+   MAIN.CSS — Arquivo principal de importação
+   Ordem: tokens → base → utilitários → componentes
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+@import "./variables.css";
+@import "./base.css";
+@import "./utilities.css";
+
+/* ─── COMPONENTES ────────────────────────────────────────── */
+@import "./components/header.css";
+@import "./components/hero.css";
+@import "./components/about.css";
+@import "./components/skills.css";
+@import "./components/projects.css";
+@import "./components/journey.css";
+@import "./components/experience.css";
+@import "./components/goals.css";
+@import "./components/contact.css";
