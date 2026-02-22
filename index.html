@@ -1,0 +1,1409 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Portfólio de Guilherme Cruz — Desenvolvedor de Software e estudante de Ciência da Computação em São Paulo, Brasil."
+        />
+        <meta name="theme-color" content="#0a0a0a" />
+        <title>Portfolio Website</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Design System Tokens -->
+        <link rel="stylesheet" href="./css/variables.css" />
+        <link rel="stylesheet" href="./css/base.css" />
+        <link rel="stylesheet" href="./css/utilities.css" />
+        <!-- Components -->
+        <link rel="stylesheet" href="./css/components/header.css" />
+        <link rel="stylesheet" href="./css/components/hero.css" />
+        <link rel="stylesheet" href="./css/components/about.css" />
+        <link rel="stylesheet" href="./css/components/skills.css" />
+        <link rel="stylesheet" href="./css/components/projects.css" />
+        <link rel="stylesheet" href="./css/components/journey.css" />
+        <link rel="stylesheet" href="./css/components/experience.css" />
+        <link rel="stylesheet" href="./css/components/goals.css" />
+        <link rel="stylesheet" href="./css/components/contact.css" />
+
+        <link
+            rel="shortcut icon"
+            href="./public/vite.svg"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <!-- ─── SKIP LINK ──────────────────────────────────────── -->
+        <a href="#main-content" class="skip-link"
+            >Ir para o conteúdo principal</a
+        >
+        <!-- ═══════════════════════════════════════════════════════
+            HEADER
+            ═══════════════════════════════════════════════════════ -->
+        <header class="header" role="banner">
+            <div class="header__inner container">
+                <a
+                    href="#hero"
+                    class="header__brand"
+                    aria-label="Guilherme Cruz — início"
+                >
+                    <span class="header__brand-dot" aria-hidden="true"></span>
+                    <span>Guilherme Cruz</span>
+                </a>
+                <nav class="header__nav" aria-label="Navegação principal">
+                    <a href="#hero" class="header__nav-link">Inicio</a>
+                    <a href="#sobre" class="header__nav-link">Sobre</a>
+                    <a href="#skills" class="header__nav-link">Skills</a>
+                    <a href="#projetos" class="header__nav-link">Projetos</a>
+                    <a href="#jornada" class="header__nav-link">Jornada</a>
+                    <a href="#experiencia" class="header__nav-link"
+                        >Experiência</a
+                    >
+                    <a href="#objetivos" class="header__nav-link">Objetivos</a>
+                    <a href="#contato" class="header__nav-link">Contato</a>
+                </nav>
+                <div class="header__actions">
+                    <button
+                        class="header__action-btn"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Alternar para tema claro"
+                    >
+                        ◐
+                    </button>
+                    <button
+                        class="header__action-btn header__menu-btn"
+                        id="menuToggle"
+                        type="button"
+                        aria-label="Abrir menu"
+                        aria-expanded="false"
+                        aria-controls="mobileNav"
+                        aria-haspopup="dialog"
+                    >
+                        <span class="header__hamburger" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- ─── OVERLAY ────────────────────────────────────────── -->
+        <div class="header__overlay" id="overlay" aria-hidden="true"></div>
+        <!-- ─── MOBILE NAV ─────────────────────────────────────── -->
+        <nav
+            class="header__mobile-nav"
+            id="mobileNav"
+            aria-label="Menu de navegação mobile"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+        >
+            <ul class="header__mobile-nav-list" role="list">
+                <li>
+                    <a href="#hero" class="header__nav-link">Inicio</a>
+                </li>
+                <li>
+                    <a href="#sobre" class="header__mobile-nav-link">Sobre</a>
+                </li>
+                <li>
+                    <a href="#skills" class="header__mobile-nav-link">Skills</a>
+                </li>
+                <li>
+                    <a href="#projetos" class="header__mobile-nav-link"
+                        >Projetos</a
+                    >
+                </li>
+                <li>
+                    <a href="#jornada" class="header__mobile-nav-link"
+                        >Jornada</a
+                    >
+                </li>
+                <li>
+                    <a href="#experiencia" class="header__mobile-nav-link"
+                        >Experiência</a
+                    >
+                </li>
+                <li>
+                    <a href="#objetivos" class="header__mobile-nav-link"
+                        >Objetivos</a
+                    >
+                </li>
+                <li>
+                    <a href="#contato" class="header__mobile-nav-link"
+                        >Contato</a
+                    >
+                </li>
+            </ul>
+            <div class="header__mobile-nav-footer">
+                <span>bl4ck404.dev.br</span>
+            </div>
+        </nav>
+        <!-- ═══════════════════════════════════════════════════════
+            MAIN
+            ═══════════════════════════════════════════════════════ -->
+        <main id="main-content">
+            <!-- ────────────────── HERO ─────────────────────────── -->
+            <section
+                class="hero"
+                id="hero"
+                aria-label="Apresentação de Guilherme Cruz"
+            >
+                <div class="hero__bg" aria-hidden="true">
+                    <div class="hero__grid"></div>
+                    <div class="hero__glow-1"></div>
+                    <div class="hero__glow-2"></div>
+                </div>
+                <div class="hero__content container">
+                    <div class="hero__text reveal">
+                        <div class="hero__badge" role="status">
+                            <span
+                                class="hero__badge-dot"
+                                aria-hidden="true"
+                            ></span>
+                            Disponível para oportunidades
+                        </div>
+                        <h1 class="hero__title">
+                            <span class="hero__title-line">Guilherme</span>
+                            <span
+                                class="hero__title-line hero__title-line--accent"
+                                >Cruz.</span
+                            >
+                        </h1>
+                        <p class="hero__subtitle">
+                            Desenvolvedor de Software · Ciência da Computação
+                        </p>
+                        <p
+                            class="hero__location"
+                            aria-label="Localização: São Paulo, SP — Brasil"
+                        >
+                            <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            São Paulo, SP — Brasil
+                        </p>
+                        <div class="hero__cta">
+                            <a href="#projetos" class="btn btn--primary">
+                                Ver projetos
+                            </a>
+                            <a href="#contato" class="btn btn--outline">
+                                Entrar em contato
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="hero__visual reveal reveal--delay-2"
+                        aria-hidden="true"
+                    >
+                        <div class="hero__avatar-wrap">
+                            <img
+                                src="public/avatar.png"
+                                alt="Foto de Guilherme Cruz"
+                                class="hero__avatar"
+                                width="300"
+                                height="300"
+                                loading="eager"
+                                onerror="this.style.display = 'none'"
+                            />
+                            <div class="hero__avatar-frame"></div>
+                            <div class="hero__avatar-badge">
+                                <span class="hero__avatar-badge-dot"></span>
+                                Wise System · CLT
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__scroll" aria-hidden="true">
+                    <span>scroll</span>
+                    <span class="hero__scroll-line"></span>
+                </div>
+            </section>
+            <!-- ────────────────── SOBRE ────────────────────────── -->
+            <section class="section" id="sobre" aria-labelledby="sobre-title">
+                <div class="container">
+                    <header class="section__header reveal">
+                        <p class="section__label">01 · Sobre</p>
+                        <h2 class="section__title" id="sobre-title">
+                            Sobre mim
+                        </h2>
+                    </header>
+                    <div class="about__grid">
+                        <div class="about__code-wrap reveal reveal--delay-1">
+                            <div class="about__code-header" aria-hidden="true">
+                                <span
+                                    class="about__code-dot about__code-dot--red"
+                                ></span>
+                                <span
+                                    class="about__code-dot about__code-dot--yellow"
+                                ></span>
+                                <span
+                                    class="about__code-dot about__code-dot--green"
+                                ></span>
+                                <span class="about__code-filename"
+                                    >guilherme.py</span
+                                >
+                            </div>
+                            <pre
+                                class="about__code-body"
+                                aria-label="Apresentação em formato Python"
+                            ><code><span class="code-keyword">class</span> <span class="code-class">GuilhermeCruz</span>:
+  <span class="code-keyword">def</span> <span class="code-fn">__init__</span>(<span class="code-property">self</span>):
+    <span class="code-property">self</span>.nome     = <span class="code-string">"Guilherme Cruz"</span>
+    <span class="code-property">self</span>.cidade   = <span class="code-string">"São Paulo, Brasil"</span>
+    <span class="code-property">self</span>.semestre = <span class="code-string">"7º Semestre"</span>
+    <span class="code-property">self</span>.uni      = <span class="code-string">"Cruzeiro do Sul"</span>
+
+  <span class="code-keyword">def</span> <span class="code-fn">foco_atual</span>(<span class="code-property">self</span>):
+    <span class="code-keyword">return</span> [
+      <span class="code-string">"APIs RESTful"</span>,
+      <span class="code-string">"Web &amp; Mobile"</span>,
+      <span class="code-string">"Qualidade de Software"</span>,
+      <span class="code-string">"Banco de Dados"</span>,
+    ]
+
+  <span class="code-keyword">def</span> <span class="code-fn">motto</span>(<span class="code-property">self</span>):
+    <span class="code-keyword">return</span> <span class="code-string">"Aplicando teoria em 🚀"</span>
+
+<span class="code-comment"># Disponível para novas oportunidades</span></code></pre>
+                        </div>
+                        <div class="about__content reveal reveal--delay-2">
+                            <p class="about__bio">
+                                Olá! Sou
+                                <span class="about__highlight"
+                                    >desenvolvedor de software</span
+                                >
+                                cursando Bacharelado em Ciência da Computação na
+                                Universidade Cruzeiro do Sul (7º semestre). Atuo
+                                como
+                                <span class="about__highlight"
+                                    >Analista de Suporte Técnico</span
+                                >
+                                na <strong>Wise System</strong>, onde fui
+                                efetivado CLT após período de estágio.
+                            </p>
+                            <p class="about__bio">
+                                Apaixonado por tecnologia, busco sempre
+                                transformar conhecimento acadêmico em soluções
+                                reais. Tenho experiência em desenvolvimento
+                                <span class="about__highlight"
+                                    >web e mobile</span
+                                >, com foco em código limpo, boas práticas e
+                                experiência do usuário.
+                            </p>
+                            <div class="about__tags">
+                                <span class="badge badge--primary"
+                                    >Português Nativo</span
+                                >
+                                <span class="badge badge--muted"
+                                    >Inglês Intermediário</span
+                                >
+                                <span class="badge badge--secondary"
+                                    >Open Source</span
+                                >
+                                <span class="badge badge--tertiary"
+                                    >Clean Code</span
+                                >
+                            </div>
+                            <div class="about__stats">
+                                <div class="about__stat">
+                                    <div class="about__stat-value">7+</div>
+                                    <div class="about__stat-label">
+                                        Semestres
+                                    </div>
+                                </div>
+                                <div class="about__stat">
+                                    <div class="about__stat-value">6+</div>
+                                    <div class="about__stat-label">
+                                        Projetos
+                                    </div>
+                                </div>
+                                <div class="about__stat">
+                                    <div class="about__stat-value">2+</div>
+                                    <div class="about__stat-label">
+                                        Anos de Dev
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ────────────────── SKILLS ───────────────────────── -->
+            <section class="section" id="skills" aria-labelledby="skills-title">
+                <div class="container">
+                    <header class="section__header reveal">
+                        <p class="section__label">02 · Skills</p>
+                        <h2 class="section__title" id="skills-title">
+                            Arsenal Digital
+                        </h2>
+                        <p class="section__subtitle">
+                            Tecnologias e ferramentas que uso no dia a dia
+                        </p>
+                    </header>
+                    <div class="skills__grid">
+                        <article class="skills__card reveal reveal--delay-1">
+                            <div class="skills__card-header">
+                                <div
+                                    class="skills__card-icon"
+                                    aria-hidden="true"
+                                >
+                                    🎨
+                                </div>
+                                <h3 class="skills__card-title">Frontend</h3>
+                            </div>
+                            <ul class="skills__list" role="list">
+                                <li class="skills__item">HTML5</li>
+                                <li class="skills__item">CSS3</li>
+                                <li class="skills__item">JavaScript</li>
+                                <li class="skills__item">React</li>
+                                <li class="skills__item">Sass</li>
+                                <li class="skills__item">Vite</li>
+                            </ul>
+                        </article>
+                        <article class="skills__card reveal reveal--delay-2">
+                            <div class="skills__card-header">
+                                <div
+                                    class="skills__card-icon"
+                                    aria-hidden="true"
+                                >
+                                    ⚙️
+                                </div>
+                                <h3 class="skills__card-title">Backend</h3>
+                            </div>
+                            <ul class="skills__list" role="list">
+                                <li class="skills__item">Node.js</li>
+                                <li class="skills__item">PHP</li>
+                                <li class="skills__item">Java</li>
+                                <li class="skills__item">Python</li>
+                                <li class="skills__item">REST APIs</li>
+                                <li class="skills__item">WebSocket</li>
+                            </ul>
+                        </article>
+                        <article class="skills__card reveal reveal--delay-3">
+                            <div class="skills__card-header">
+                                <div
+                                    class="skills__card-icon"
+                                    aria-hidden="true"
+                                >
+                                    🗄️
+                                </div>
+                                <h3 class="skills__card-title">Dados</h3>
+                            </div>
+                            <ul class="skills__list" role="list">
+                                <li class="skills__item">MySQL</li>
+                                <li class="skills__item">Firebase</li>
+                                <li class="skills__item">SQL</li>
+                            </ul>
+                        </article>
+                        <article class="skills__card reveal reveal--delay-1">
+                            <div class="skills__card-header">
+                                <div
+                                    class="skills__card-icon"
+                                    aria-hidden="true"
+                                >
+                                    🛠️
+                                </div>
+                                <h3 class="skills__card-title">Ferramentas</h3>
+                            </div>
+                            <ul class="skills__list" role="list">
+                                <li class="skills__item">Git</li>
+                                <li class="skills__item">Docker</li>
+                                <li class="skills__item">VS Code</li>
+                                <li class="skills__item">IntelliJ</li>
+                                <li class="skills__item">GitHub Actions</li>
+                            </ul>
+                        </article>
+                        <article class="skills__card reveal reveal--delay-2">
+                            <div class="skills__card-header">
+                                <div
+                                    class="skills__card-icon"
+                                    aria-hidden="true"
+                                >
+                                    🎮
+                                </div>
+                                <h3 class="skills__card-title">
+                                    Design &amp; Criação
+                                </h3>
+                            </div>
+                            <ul class="skills__list" role="list">
+                                <li class="skills__item">Figma</li>
+                                <li class="skills__item">Unity</li>
+                                <li class="skills__item">Photoshop</li>
+                                <li class="skills__item">Illustrator</li>
+                            </ul>
+                        </article>
+                        <article class="skills__card reveal reveal--delay-3">
+                            <div class="skills__card-header">
+                                <div
+                                    class="skills__card-icon"
+                                    aria-hidden="true"
+                                >
+                                    🌍
+                                </div>
+                                <h3 class="skills__card-title">
+                                    Sistemas Operacionais
+                                </h3>
+                            </div>
+                            <ul class="skills__list" role="list">
+                                <li class="skills__item">Linux</li>
+                                <li class="skills__item">Windows</li>
+                                <li class="skills__item">Terminal</li>
+                                <li class="skills__item">Shell Script</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- ────────────────── PROJETOS ─────────────────────── -->
+            <section
+                class="section"
+                id="projetos"
+                aria-labelledby="projetos-title"
+            >
+                <div class="container">
+                    <header class="section__header reveal">
+                        <p class="section__label">03 · Projetos</p>
+                        <h2 class="section__title" id="projetos-title">
+                            Projetos em Destaque
+                        </h2>
+                        <p class="section__subtitle">
+                            Soluções que desenvolvi com paixão e criatividade
+                        </p>
+                    </header>
+                    <div class="projects__grid">
+                        <article class="project-card reveal reveal--delay-1">
+                            <div class="project-card__header">
+                                <span
+                                    class="project-card__emoji"
+                                    aria-hidden="true"
+                                    >💬</span
+                                >
+                                <div class="project-card__links">
+                                    <a
+                                        href="https://github.com/https-shini/web-chat"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="GitHub: Chat em Tempo Real"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href="https://chat-frontend-g42t.onrender.com"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Deploy: Chat em Tempo Real"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                            />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line
+                                                x1="10"
+                                                y1="14"
+                                                x2="21"
+                                                y2="3"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__subtitle">
+                                    Aplicação Web
+                                </p>
+                                <h3 class="project-card__title">
+                                    Chat em Tempo Real
+                                </h3>
+                                <p class="project-card__desc">
+                                    Sistema de chat web com comunicação
+                                    instantânea entre usuários via WebSocket,
+                                    similar ao WhatsApp no navegador.
+                                </p>
+                            </div>
+                            <div class="project-card__footer">
+                                <span class="badge badge--muted">HTML5</span>
+                                <span class="badge badge--muted">CSS3</span>
+                                <span class="badge badge--muted">Node.js</span>
+                                <span class="badge badge--muted"
+                                    >WebSocket</span
+                                >
+                            </div>
+                        </article>
+                        <article class="project-card reveal reveal--delay-2">
+                            <div class="project-card__header">
+                                <span
+                                    class="project-card__emoji"
+                                    aria-hidden="true"
+                                    >🏃‍♂️</span
+                                >
+                                <div class="project-card__links">
+                                    <a
+                                        href="https://github.com/https-shini/Atletismo-Java"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="GitHub: Gestão de Atletismo"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href="https://github.com/https-shini/Atletismo-Java/archive/refs/heads/main.zip"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Download: Gestão de Atletismo"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                            />
+                                            <polyline
+                                                points="7 10 12 15 17 10"
+                                            />
+                                            <line
+                                                x1="12"
+                                                y1="15"
+                                                x2="12"
+                                                y2="3"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__subtitle">
+                                    Desktop App
+                                </p>
+                                <h3 class="project-card__title">
+                                    Gestão de Atletismo
+                                </h3>
+                                <p class="project-card__desc">
+                                    Software desktop completo para cadastro de
+                                    atletas, gerenciamento de competições e
+                                    análise estatística com estruturas de dados
+                                    avançadas.
+                                </p>
+                            </div>
+                            <div class="project-card__footer">
+                                <span class="badge badge--muted">Java</span>
+                                <span class="badge badge--muted">Swing</span>
+                                <span class="badge badge--muted"
+                                    >ArrayList</span
+                                >
+                                <span class="badge badge--muted"
+                                    >Pilha/Fila</span
+                                >
+                            </div>
+                        </article>
+                        <article class="project-card reveal reveal--delay-3">
+                            <div class="project-card__header">
+                                <span
+                                    class="project-card__emoji"
+                                    aria-hidden="true"
+                                    >💰</span
+                                >
+                                <div class="project-card__links">
+                                    <a
+                                        href="https://github.com/https-shini/financas-reactjs"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="GitHub: Controle Financeiro"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href="https://financas-reactjs.vercel.app"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Deploy: Controle Financeiro"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                            />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line
+                                                x1="10"
+                                                y1="14"
+                                                x2="21"
+                                                y2="3"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__subtitle">Web App</p>
+                                <h3 class="project-card__title">
+                                    Controle Financeiro
+                                </h3>
+                                <p class="project-card__desc">
+                                    Dashboard intuitivo para controle de
+                                    receitas e gastos pessoais com visualização
+                                    de dados em tempo real.
+                                </p>
+                            </div>
+                            <div class="project-card__footer">
+                                <span class="badge badge--muted">React</span>
+                                <span class="badge badge--muted"
+                                    >JavaScript</span
+                                >
+                                <span class="badge badge--muted">CSS3</span>
+                            </div>
+                        </article>
+                        <article class="project-card reveal reveal--delay-1">
+                            <div class="project-card__header">
+                                <span
+                                    class="project-card__emoji"
+                                    aria-hidden="true"
+                                    >🍿</span
+                                >
+                                <div class="project-card__links">
+                                    <a
+                                        href="https://github.com/https-shini/movies_lib"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="GitHub: Filmes Explorer"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href="https://movieslib-krd.vercel.app"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Deploy: Filmes Explorer"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                            />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line
+                                                x1="10"
+                                                y1="14"
+                                                x2="21"
+                                                y2="3"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__subtitle">
+                                    Web App · TMDB API
+                                </p>
+                                <h3 class="project-card__title">
+                                    Filmes Explorer
+                                </h3>
+                                <p class="project-card__desc">
+                                    Plataforma para explorar e descobrir filmes
+                                    consumindo a API do TMDB com busca, detalhes
+                                    e navegação.
+                                </p>
+                            </div>
+                            <div class="project-card__footer">
+                                <span class="badge badge--muted">React</span>
+                                <span class="badge badge--muted">Vite</span>
+                                <span class="badge badge--muted">TMDB API</span>
+                            </div>
+                        </article>
+                        <article class="project-card reveal reveal--delay-2">
+                            <div class="project-card__header">
+                                <span
+                                    class="project-card__emoji"
+                                    aria-hidden="true"
+                                    >🧠</span
+                                >
+                                <div class="project-card__links">
+                                    <a
+                                        href="https://github.com/https-shini/memory-game"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="GitHub: Jogo da Memória"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href="https://https-shini.github.io/memory-game"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Deploy: Jogo da Memória"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                            />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line
+                                                x1="10"
+                                                y1="14"
+                                                x2="21"
+                                                y2="3"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__subtitle">Game</p>
+                                <h3 class="project-card__title">
+                                    Jogo da Memória
+                                </h3>
+                                <p class="project-card__desc">
+                                    Jogo da memória com design moderno e
+                                    mecânicas envolventes para treinar
+                                    concentração e raciocínio.
+                                </p>
+                            </div>
+                            <div class="project-card__footer">
+                                <span class="badge badge--muted">HTML5</span>
+                                <span class="badge badge--muted">CSS3</span>
+                                <span class="badge badge--muted"
+                                    >JavaScript</span
+                                >
+                            </div>
+                        </article>
+                        <article class="project-card reveal reveal--delay-3">
+                            <div class="project-card__header">
+                                <span
+                                    class="project-card__emoji"
+                                    aria-hidden="true"
+                                    >👾</span
+                                >
+                                <div class="project-card__links">
+                                    <a
+                                        href="https://github.com/https-shini/space-invaders"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="GitHub: Space Invaders"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href="https://https-shini.github.io/space-invaders"
+                                        class="project-card__link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Deploy: Space Invaders"
+                                    >
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                            />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line
+                                                x1="10"
+                                                y1="14"
+                                                x2="21"
+                                                y2="3"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__subtitle">
+                                    Game · Arcade
+                                </p>
+                                <h3 class="project-card__title">
+                                    Space Invaders
+                                </h3>
+                                <p class="project-card__desc">
+                                    Recriação modernizada do clássico arcade com
+                                    gráficos atualizados, jogabilidade suave e
+                                    física de jogo implementada do zero.
+                                </p>
+                            </div>
+                            <div class="project-card__footer">
+                                <span class="badge badge--muted">HTML5</span>
+                                <span class="badge badge--muted">CSS3</span>
+                                <span class="badge badge--muted"
+                                    >JavaScript</span
+                                >
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- ────────────────── JORNADA ──────────────────────── -->
+            <section
+                class="section"
+                id="jornada"
+                aria-labelledby="jornada-title"
+            >
+                <div class="container">
+                    <header class="section__header reveal">
+                        <p class="section__label">04 · Jornada</p>
+                        <h2 class="section__title" id="jornada-title">
+                            Trajetória Acadêmica
+                        </h2>
+                    </header>
+                    <div class="journey__grid">
+                        <div class="reveal reveal--delay-1">
+                            <p class="journey__column-title">Formação</p>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <div class="timeline__side">
+                                        <div class="timeline__dot"></div>
+                                        <div class="timeline__line"></div>
+                                    </div>
+                                    <div class="timeline__body">
+                                        <p class="timeline__period">
+                                            2023 — 2026
+                                        </p>
+                                        <h3 class="timeline__title">
+                                            Bacharelado em Ciência da Computação
+                                        </h3>
+                                        <p class="timeline__institution">
+                                            Universidade Cruzeiro do Sul
+                                        </p>
+                                        <div class="timeline__tags">
+                                            <span class="badge badge--success"
+                                                >Em andamento · 7º sem</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__side">
+                                        <div class="timeline__dot"></div>
+                                        <div class="timeline__line"></div>
+                                    </div>
+                                    <div class="timeline__body">
+                                        <p class="timeline__period">
+                                            2020 — 2022
+                                        </p>
+                                        <h3 class="timeline__title">
+                                            Técnico em Análise e Desenvolvimento
+                                            de Sistemas
+                                        </h3>
+                                        <p class="timeline__institution">
+                                            ETEC Vila Formosa
+                                        </p>
+                                        <div class="timeline__tags">
+                                            <span class="badge badge--secondary"
+                                                >Concluído</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reveal reveal--delay-2">
+                            <p class="journey__column-title">Certificações</p>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <div class="timeline__side">
+                                        <div class="timeline__dot"></div>
+                                        <div class="timeline__line"></div>
+                                    </div>
+                                    <div class="timeline__body">
+                                        <p class="timeline__period">2024</p>
+                                        <h3 class="timeline__title">
+                                            JavaScript Algorithms and Data
+                                            Structures
+                                        </h3>
+                                        <p class="timeline__institution">
+                                            freeCodeCamp
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__side">
+                                        <div class="timeline__dot"></div>
+                                        <div class="timeline__line"></div>
+                                    </div>
+                                    <div class="timeline__body">
+                                        <p class="timeline__period">2023</p>
+                                        <h3 class="timeline__title">
+                                            Responsive Web Design
+                                        </h3>
+                                        <p class="timeline__institution">
+                                            freeCodeCamp
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline__item">
+                                    <div class="timeline__side">
+                                        <div class="timeline__dot"></div>
+                                        <div class="timeline__line"></div>
+                                    </div>
+                                    <div class="timeline__body">
+                                        <p class="timeline__period">2022</p>
+                                        <h3 class="timeline__title">
+                                            Git e GitHub do básico ao avançado
+                                        </h3>
+                                        <p class="timeline__institution">
+                                            Udemy
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ────────────────── EXPERIÊNCIA ──────────────────── -->
+            <section
+                class="section"
+                id="experiencia"
+                aria-labelledby="exp-title"
+            >
+                <div class="container">
+                    <header class="section__header reveal">
+                        <p class="section__label">05 · Experiência</p>
+                        <h2 class="section__title" id="exp-title">
+                            Experiência Profissional
+                        </h2>
+                    </header>
+                    <div class="experience__table-wrap reveal reveal--delay-1">
+                        <table
+                            class="experience__table"
+                            aria-label="Histórico de experiências profissionais"
+                        >
+                            <thead>
+                                <tr>
+                                    <th scope="col">Cargo</th>
+                                    <th scope="col">Empresa</th>
+                                    <th scope="col">Período</th>
+                                    <th scope="col">Regime</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Cargo">
+                                        Analista de Suporte Técnico (Helpdesk)
+                                    </td>
+                                    <td data-label="Empresa">Wise System</td>
+                                    <td data-label="Período">
+                                        Jan/2026 – Atual
+                                    </td>
+                                    <td data-label="Regime">
+                                        <span class="badge badge--primary"
+                                            >CLT Efetivado</span
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Cargo">
+                                        Analista de Suporte Técnico (Helpdesk)
+                                    </td>
+                                    <td data-label="Empresa">Wise System</td>
+                                    <td data-label="Período">
+                                        Abr/2025 – Dez/2025
+                                    </td>
+                                    <td data-label="Regime">
+                                        <span class="badge badge--warning"
+                                            >Estagiário</span
+                                        >
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!-- ────────────────── OBJETIVOS ────────────────────── -->
+            <section
+                class="section"
+                id="objetivos"
+                aria-labelledby="goals-title"
+            >
+                <div class="container">
+                    <header class="section__header reveal">
+                        <p class="section__label">06 · Objetivos</p>
+                        <h2 class="section__title" id="goals-title">
+                            Objetivos 2025–2026
+                        </h2>
+                        <p class="section__subtitle">
+                            Metas que guiam meu desenvolvimento profissional e
+                            pessoal
+                        </p>
+                    </header>
+                    <div class="goals__table-wrap reveal reveal--delay-1">
+                        <table
+                            class="goals__table"
+                            aria-label="Lista de objetivos 2025-2026"
+                        >
+                            <thead>
+                                <tr>
+                                    <th scope="col">Objetivo</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Por que é importante</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Objetivo">
+                                        Garantia de Qualidade de Software
+                                    </td>
+                                    <td data-label="Status">
+                                        <span class="badge badge--warning"
+                                            >Em estudo</span
+                                        >
+                                    </td>
+                                    <td data-label="Importância">
+                                        Construir soluções mais robustas e
+                                        confiáveis.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Objetivo">
+                                        Desenvolvimento Web e Mobile
+                                    </td>
+                                    <td data-label="Status">
+                                        <span class="badge badge--warning"
+                                            >Em estudo</span
+                                        >
+                                    </td>
+                                    <td data-label="Importância">
+                                        Entregar código mais limpo, otimizado e
+                                        eficiente.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Objetivo">
+                                        Banco de Dados
+                                    </td>
+                                    <td data-label="Status">
+                                        <span class="badge badge--warning"
+                                            >Em estudo</span
+                                        >
+                                    </td>
+                                    <td data-label="Importância">
+                                        Melhorar o gerenciamento e otimizar a
+                                        informação.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Objetivo">
+                                        Crescer profissionalmente
+                                    </td>
+                                    <td data-label="Status">
+                                        <span class="badge badge--success"
+                                            >Em andamento</span
+                                        >
+                                    </td>
+                                    <td data-label="Importância">
+                                        Aplicar teoria na prática e se
+                                        desenvolver.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Objetivo">
+                                        Fluência em Inglês
+                                    </td>
+                                    <td data-label="Status">
+                                        <span class="badge badge--success"
+                                            >Em andamento</span
+                                        >
+                                    </td>
+                                    <td data-label="Importância">
+                                        Ampliar oportunidades e acessar
+                                        conhecimento global.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Objetivo">
+                                        Concluir a Graduação
+                                    </td>
+                                    <td data-label="Status">
+                                        <span class="badge badge--info"
+                                            >Planejado</span
+                                        >
+                                    </td>
+                                    <td data-label="Importância">
+                                        Construir base sólida para uma carreira
+                                        de sucesso.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Objetivo">
+                                        Contribuir para Open Source
+                                    </td>
+                                    <td data-label="Status">
+                                        <span class="badge badge--secondary"
+                                            >Idealizando</span
+                                        >
+                                    </td>
+                                    <td data-label="Importância">
+                                        Compartilhar conhecimento e colaborar
+                                        com a comunidade.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!-- ────────────────── CONTATO ──────────────────────── -->
+            <section
+                class="section"
+                id="contato"
+                aria-labelledby="contato-title"
+            >
+                <div class="container">
+                    <header class="section__header reveal">
+                        <p class="section__label">07 · Contato</p>
+                        <h2 class="section__title" id="contato-title">
+                            Vamos conversar
+                        </h2>
+                    </header>
+                    <p class="contact__subtitle reveal reveal--delay-1">
+                        Acredito que o melhor código nasce da paixão e
+                        criatividade! Estou disponível para novas oportunidades
+                        e colaborações.
+                    </p>
+                    <div
+                        class="contact__cards reveal reveal--delay-2"
+                        role="list"
+                    >
+                        <a
+                            href="https://bl4ck404.dev.br"
+                            class="contact__card"
+                            role="listitem"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Acessar portfólio (abre em nova aba)"
+                        >
+                            <div class="contact__card-icon" aria-hidden="true">
+                                🌐
+                            </div>
+                            <span class="contact__card-label">Portfólio</span>
+                            <span class="contact__card-value"
+                                >bl4ck404.dev.br</span
+                            >
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/oguilherme-cruz"
+                            class="contact__card"
+                            role="listitem"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Perfil LinkedIn (abre em nova aba)"
+                        >
+                            <div class="contact__card-icon" aria-hidden="true">
+                                💼
+                            </div>
+                            <span class="contact__card-label">LinkedIn</span>
+                            <span class="contact__card-value"
+                                >oguilherme-cruz</span
+                            >
+                        </a>
+                        <a
+                            href="mailto:contact@bl4ck404.dev.br"
+                            class="contact__card"
+                            role="listitem"
+                            aria-label="Enviar email para contact@bl4ck404.dev.br"
+                        >
+                            <div class="contact__card-icon" aria-hidden="true">
+                                ✉️
+                            </div>
+                            <span class="contact__card-label">Email</span>
+                            <span class="contact__card-value"
+                                >contact@bl4ck404.dev.br</span
+                            >
+                        </a>
+                        <a
+                            href="https://github.com/https-shini"
+                            class="contact__card"
+                            role="listitem"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Perfil GitHub (abre em nova aba)"
+                        >
+                            <div class="contact__card-icon" aria-hidden="true">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                    />
+                                </svg>
+                            </div>
+                            <span class="contact__card-label">GitHub</span>
+                            <span class="contact__card-value">https-shini</span>
+                        </a>
+                    </div>
+                    <blockquote class="contact__quote reveal reveal--delay-3">
+                        <p>
+                            "O futuro pertence àqueles que acreditam na beleza
+                            de seus sonhos digitais" ✨
+                        </p>
+                    </blockquote>
+                </div>
+            </section>
+        </main>
+        <!-- ═══════════════════════════════════════════════════════
+            FOOTER
+            ═══════════════════════════════════════════════════════ -->
+        <footer class="footer" role="contentinfo">
+            <div class="footer__inner container">
+                <p class="footer__text">
+                    Feito com <span aria-label="amor">♥</span> por Guilherme
+                    Cruz · São Paulo, Brasil
+                </p>
+                <p class="footer__copy">
+                    © <span id="year"></span> · Todos os direitos reservados
+                </p>
+            </div>
+        </footer>
+        <!-- ─── SCROLL TOP ──────────────────────────────────────── -->
+        <button
+            class="scroll-top"
+            id="scrollTop"
+            type="button"
+            aria-label="Voltar ao topo da página"
+        >
+            <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                aria-hidden="true"
+            >
+                <polyline points="18 15 12 6 6 15" />
+            </svg>
+        </button>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>
